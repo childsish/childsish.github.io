@@ -1,0 +1,11 @@
+# Site settings
+title: Need a better title
+description: >
+  Project descriptions still to be generated and placed here
+baseurl: ""
+url: "childsish.github.com"
+twitter_username: childsish
+github_username:  childsish
+
+# Build settings
+markdown: kramdown
