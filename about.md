@@ -124,16 +124,18 @@ Software
 
 [Matapax][matapax]
 
+[SoFIA][sofia]
+
 GitHub Projects
 ---------------
 
 [childsish@github](http://github.com/childsish)
 
-[Dynamic PyYAML](http://github.com/childsish/dynamic-pyyaml)
+[SoFIA](https://githib.com/childsish/sofia)
 
-[NetCDF4 Marker Sets](http://github.com/childsish/ncdf-markers)
+[Dynamic PyYAML](http://github.com/childsish/dynamic-pyyaml)
 
 
 [grapple]: http://grapple.mpimp-golm.mpg.de
 [matapax]: http://matapax.mpimp-golm.mpg.de
-
+[sofia]: https://github.com/childsish/sofia

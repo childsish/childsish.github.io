@@ -1,9 +1,10 @@
 # Site settings
-title: Need a better title
-description: >
-  Project descriptions still to be generated and placed here
+layout: post
+comments: true
+title: Childsish Musings
+description: Some programming, perhaps a little statistics and bioinformatics
 baseurl: ""
-url: "childsish.github.com"
+url: "https://childsish.github.com"
 twitter_username: childsish
 github_username:  childsish
 
