@@ -17,7 +17,7 @@ print sorted(chromosomes)
 
 This can be easily fixed by using a key that allows natural ordering (what we expect as humans).
 
-```{python}
+```python
 import re
 
 regx = re.compile('(\d+)')
@@ -28,17 +28,17 @@ def natural_key(item):
 
 Basically, we split the string into numerical and non-numerical string and convert the numerical string into actual integers. Now any comparison of the numerical parts will result in the comparison of the numerical value and not the string value. This gives us a more intuitive ordering of the chromosome names.
 
-```{python}
+```python
 print sorted(chromosomes, key=natural_key)
 ```
 
-```{python}
+```python
 ['chr1', 'chr2', 'chr3', 'chr10', 'chr11', 'chr20', 'chr21']
 ```
 
 However this comes at a cost. The extra processing takes much more time than a simple sort. Let's define a couple more functions to help the comparison (and to explore other possibilities).
 
-```{python}
+```python
 def no_key(item):
     return item
 
