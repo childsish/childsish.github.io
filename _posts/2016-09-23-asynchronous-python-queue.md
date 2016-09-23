@@ -2,6 +2,7 @@
 layout: post
 title: Asynchronous Python Queue
 categories: python
+comments: true
 ---
 
 Futures (PEP 3148 <sup>[1][1]</sup>) and the `async` and `await` keywords (PEP 492 <sup>[2][2]</sup>) are relatively new additions to the Python core language. With them, Python has begun to make asynchronous programming a core part of its appeal. Asynchronous programming is a good choice when certain tasks take a long time to complete, but do not consume much CPU (eg. waiting for a database query or network communication). In such cases, an asynchronous program can continue with other tasks and pick up after previous tasks once they have completed. A word of caution, asynchronous programming is not concurrent programming.

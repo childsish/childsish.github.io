@@ -2,6 +2,7 @@
 layout: post
 title: Performance Measures
 categories: statistical-learning
+comments: true
 ---
 
 | Name  | Equation  | Notes  |

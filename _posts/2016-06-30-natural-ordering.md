@@ -2,6 +2,7 @@
 layout: post
 title: Natural Ordering
 categories: python
+comments: true
 ---
 
 Sorting chromosome names can be a little frustrating when using the implicit ordering of strings. 
