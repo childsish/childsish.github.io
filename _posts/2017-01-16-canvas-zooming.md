@@ -5,11 +5,11 @@ categories: javascript
 comments: true
 ---
 
-<canvas id="canvas" width=800 height=800 style="display: block; margin-left: auto; margin-right: auto"></canvas>
+<canvas id="canvas" width="800" height="800" style="display: block; margin-left: auto; margin-right: auto"></canvas>
 <script type="text/javascript">{% include js/canvas-zooming.js %}</script>
 
 ```
-<canvas id="canvas" width=800 height=800 style="display: block; margin-left: auto; margin-right: auto"></canvas>
+<canvas id="canvas" width="800" height="800" style="display: block; margin-left: auto; margin-right: auto"></canvas>
 <script type="text/javascript">
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
