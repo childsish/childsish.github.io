@@ -14,7 +14,7 @@ image.onload = function () {
     canvas.onmousewheel = zoom;
     draw();
 };
-image.src = 'data/nebula.jpg';
+image.src = 'https://www.nasa.gov/sites/default/files/images/159427main_image_feature_666_ys_full.jpg';
 
 function zoom(event) {
     let mousex = event.clientX - canvas.offsetLeft;
