@@ -1,5 +1,5 @@
 (function() {
-    var canvas = document.getElementById('canvas0');
+    var canvas = document.getElementById('canvas1');
     var context = canvas.getContext('2d');
     var fps = 60;
     var mouse = { x: 0, y: 0 };
