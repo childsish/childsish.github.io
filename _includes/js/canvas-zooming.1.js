@@ -21,8 +21,9 @@
     image.src = 'https://www.nasa.gov/sites/default/files/images/159427main_image_feature_666_ys_full.jpg';
 
     function track_mouse(event) {
-        mouse.x = event.clientX - canvas.offsetLeft;
-        mouse.y = event.clientY - canvas.offsetTop;
+        let rectangle = canvas.getBoundingClientRect();
+        mouse.x = event.clientX - rectangle.left;
+        mouse.y = event.clientY - rectangle.top;
     }
 
     function zoom(event) {

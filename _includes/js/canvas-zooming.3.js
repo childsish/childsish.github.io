@@ -28,8 +28,9 @@
     image.src = 'https://www.nasa.gov/sites/default/files/images/159427main_image_feature_666_ys_full.jpg';
 
     function track_mouse(event) {
-        mouse.x = event.clientX - canvas.offsetLeft;
-        mouse.y = event.clientY - canvas.offsetTop;
+        let rectangle = canvas.getBoundingClientRect();
+        mouse.x = event.clientX - rectangle.left;
+        mouse.y = event.clientY - rectangle.top;
     }
 
     function zoom(event) {
@@ -53,20 +54,20 @@
     function stop_drag(event) {
         viewport.x += drag.dx;
         drag.dx = 0;
-        viewport.y = drag.dy;
+        viewport.y += drag.dy;
         drag.dy = 0;
         mouse.is_down = false;
     }
 
     function update() {
         viewport.x = limit_value(viewport.x, 0, image.width - canvas.width * viewport.scale);
-        viewport.y = limit_value(viewport.y, 0, image.heigh - canvas.height * viewport.scale);
+        viewport.y = limit_value(viewport.y, 0, image.height - canvas.height * viewport.scale);
 
         if (mouse.is_down) {
             drag.dx = (drag.x - mouse.x) * viewport.scale;
             drag.dx = limit_value(drag.dx, -viewport.x, image.width - viewport.x - canvas.width * viewport.scale);
             drag.dy = (drag.y - mouse.y) * viewport.scale;
-            drag.dy = limit_value(drag.dy, -viewport.y, image.height- viewport.y - canvas.height * viewport.scale);
+            drag.dy = limit_value(drag.dy, -viewport.y, image.height - viewport.y - canvas.height * viewport.scale);
         }
     }
 
