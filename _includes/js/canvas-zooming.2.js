@@ -1,9 +1,10 @@
-var canvas = document.getElementById('canvas0');
+var canvas = document.getElementById('canvas2');
 var context = canvas.getContext('2d');
 var fps = 60;
-var mouse = { x: 0, y: 0 };
+var mouse = { x: 0, y: 0, is_down: true };
 var factor = 1.1;
 var viewport = { x: 0, y: 0, scale: 1 };
+var drag = { x: 0, y: 0, dx: 0, dy: 0 };
 
 var image = new Image();
 image.onload = function () {
@@ -12,8 +13,12 @@ image.onload = function () {
     canvas.onmousemove = track_mouse;
     canvas.onwheel = zoom;
     canvas.onmousewheel = zoom;
+    canvas.onmousedown = start_drag;
+    canvas.onmouseup = stop_drag;
+    canvas.onmouseout = stop_drag;
 
     setInterval(function() {
+        update();
         draw();
     }, 1000/fps);
 };
@@ -35,8 +40,29 @@ function zoom(event) {
     event.preventDefault();
 }
 
+function start_drag(event) {
+    drag.x = mouse.x;
+    drag.y = mouse.y;
+    mouse.is_down = true;
+}
+
+function stop_drag(event) {
+    viewport.x += drag.dx;
+    drag.dx = 0;
+    viewport.y = drag.dy;
+    drag.dy = 0;
+    mouse.is_down = false;
+}
+
+function update() {
+    if (mouse.is_down) {
+        drag.dx = (drag.x - mouse.x) * viewport.scale;
+        drag.dy = (drag.y - mouse.y) * viewport.scale;
+    }
+}
+
 function draw() {
     context.drawImage(image,
-        viewport.x, viewport.y, canvas.width * viewport.scale, canvas.height * viewport.scale,
+        viewport.x + drag.x, viewport.y + drag.y, canvas.width * viewport.scale, canvas.height * viewport.scale,
         0, 0, canvas.width, canvas.height);
 }

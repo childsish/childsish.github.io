@@ -1,4 +1,4 @@
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('canvas0');
 var context = canvas.getContext('2d');
 var fps = 60;
 

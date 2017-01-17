@@ -33,3 +33,9 @@ layout: default
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 {% endif %}
+
+{% for js in page.scripts %}
+  <script type="text/javascript">
+  {% include {{ js }} %}
+  </script>
+{% endfor %}

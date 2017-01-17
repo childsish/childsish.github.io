@@ -10,3 +10,7 @@ github_username:  childsish
 
 # Build settings
 markdown: kramdown
+
+gems:
+ - jekyll-gist
+ - certified

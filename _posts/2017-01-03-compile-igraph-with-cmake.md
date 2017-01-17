@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Compile igraph with CMake
-categories: igraph, C, CLion
+categories: igraph
 comments: true
 ---
 
