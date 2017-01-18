@@ -161,7 +161,7 @@ Let's update the `mouse` variable to track whether the left-mouse-button is depr
 
 ```diff
 - var mouse = { x: 0, y: 0 };
-+ var mouse = { x: 0, y: 0, is_down = true };
++ var mouse = { x: 0, y: 0, is_down = false };
   var factor = 1.1;
   var viewport = { x: 0, y: 0, scale: 1 };
 + var drag = { x: 0, y: 0, dx: 0, dy: 0 };
@@ -214,13 +214,13 @@ We create three new functions to track the dragging status and details. When the
 + }
 ```
 
-Finally, we update the draw function to use the dragging details.
+Finally, we update the draw function to use the drag offset.
 
 ```diff
   function draw() {
       context.drawImage(image,
 -         viewport.x, viewport.y, canvas.width * viewport.scale, canvas.height * viewport.scale,
-+         viewport.x + drag.x, viewport.y + drag.y, canvas.width * viewport.scale, canvas.height * viewport.scale,
++         viewport.x + drag.dx, viewport.y + drag.dy, canvas.width * viewport.scale, canvas.height * viewport.scale,
           0, 0, canvas.width, canvas.height);
   }
 ```

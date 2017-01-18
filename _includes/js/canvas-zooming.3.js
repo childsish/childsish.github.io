@@ -2,7 +2,7 @@
     var canvas = document.getElementById('canvas3');
     var context = canvas.getContext('2d');
     var fps = 60;
-    var mouse = { x: 0, y: 0, is_down: true };
+    var mouse = { x: 0, y: 0, is_down: false };
     var factor = 1.1;
     var viewport = { x: 0, y: 0, scale: 1 };
     var drag = { x: 0, y: 0, dx: 0, dy: 0 };
