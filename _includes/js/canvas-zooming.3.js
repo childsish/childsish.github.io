@@ -73,6 +73,7 @@
 
     function draw() {
         context.drawImage(image,
+            viewport.x + drag.dx, viewport.y + drag.dy, canvas.width * viewport.scale, canvas.height * viewport.scale,
             0, 0, canvas.width, canvas.height);
     }
 
