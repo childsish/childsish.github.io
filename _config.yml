@@ -5,6 +5,7 @@ title: Childs Play
 description: Some programming, perhaps a little statistics and bioinformatics
 baseurl: ""
 url: "https://childsish.github.com"
+public_key: "static/47843F07AE66489C1073C43AC144AA52C3F93903.asc"
 twitter_username: childsish
 github_username:  childsish
 
