@@ -11,6 +11,7 @@ github_username:  childsish
 
 # Build settings
 markdown: kramdown
+future: true
 
 gems:
  - jekyll-gist

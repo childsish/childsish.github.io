@@ -39,3 +39,9 @@ layout: default
   {% include {{ js }} %}
   </script>
 {% endfor %}
+
+{% for css in page.styles %}
+  <style>
+  {% include {{ css }} %}
+  </style>
+{% endfor %}

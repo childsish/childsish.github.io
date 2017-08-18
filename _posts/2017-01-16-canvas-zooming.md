@@ -4,10 +4,10 @@ title: Zooming and panning images in HTML canvas
 categories: javascript
 comments: true
 scripts:
- - js/canvas-zooming.0.js
- - js/canvas-zooming.1.js
- - js/canvas-zooming.2.js
- - js/canvas-zooming.3.js
+ - js/2017-01-16-canvas-zooming/canvas-zooming.0.js
+ - js/2017-01-16-canvas-zooming/canvas-zooming.1.js
+ - js/2017-01-16-canvas-zooming/canvas-zooming.2.js
+ - js/2017-01-16-canvas-zooming/canvas-zooming.3.js
 ---
 
 I was unable to find any good tutorials on how to implement the zooming and panning of images using canvas in html, so I've created this post. Hopefully someone other than myself will find it helpful.

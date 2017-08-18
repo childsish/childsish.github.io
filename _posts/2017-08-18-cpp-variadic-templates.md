@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Variadic Templates in C++
-categories: C++, C++11
+categories: C++
 comments: true
 ---
 
