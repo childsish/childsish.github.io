@@ -30,7 +30,7 @@ As you can see, you can define any type for the entries in the tuple making it e
 template <typename... Ts> struct tuple {};
 ```
 
-That any number of type arguments are accepted are specified by the `...` after the `typename` symbol (alternatively `class`). What we see here is incomplete though. Where do we store the actual values? How do we access the types for each value? How many entries are in the tuple? To answer these questions you have to go through a process called template list unrolling (or something similar). In more detail, you don't actually directly access an entry in the argument list; rather, you create a nested template structure that terminates when you've reached a desired condition. Let write a more complete `tuple` to demonstrate this.  
+That any number of type arguments are accepted are specified by the `...` after the `typename` symbol (alternatively `class`). What we see here is incomplete though. Where do we store the actual values? How do we access the types for each value? To answer these questions you have to go through a process called template list unrolling (or something similar). In more detail, you don't actually directly access an entry in the argument list; rather, you create a nested template structure that terminates when you've reached a desired condition. Let write a more complete `tuple` to demonstrate this.  
 
 ```$cpp
 template <typename... Ts> struct tuple {};  // same as above
@@ -41,7 +41,7 @@ struct tuple<T, Ts...> : tuple<Ts...> {
 };
 ```
 
-Now, we can unravel the argument list. For example, if we specialise the template like this:
+Notice that we've created a specialisation of the tuple template. We now have two templates, one that has `Ts...` as a template parameter and the other that has `T` and `Ts...` as template parameters. When resolving a tuple, the template with two parameters is preferred over the template with one. When this happens, a single argument from the argument list becomes `T` and the remaining are used to create a new template specialisation. This occurs recursively until no arguments are left and `Ts...` is the only option and will be empty. Now, we can unravel the argument list. For example, if we specialise the template like this:
 
 ```cpp
 tuple<double, int, std::string> my_tuple;
@@ -107,7 +107,7 @@ private:
 }
 ```
 
-But that would only work on a single partition. Somehow we need to recurse through the partitions until we hot the right one then call the `add_vertex` method that actually inserts the value. But how will we know when to stop recursing? Here, we introduce the `std::enable_if` struct. `std::enable_if` takes two template arguments, a boolean (or an expression that evaluates at runtime to a boolean) and the type contained in member `::type` if the first argument is `true`. If the first argument of `std::enable_if` evaluates to false, then the entire function signature is invalid and can not be used. Now we can introduce the partition we want to add to as a template argument, subtract one from the partition number at each recursion until we reach 0 and then switch to using the function that adds to the map.
+But that would only work on a single partition. Somehow we need to recurse through the partitions until we hit the right one then call the `add_vertex` method that actually inserts the value. But how will we know when to stop recursing? Here, we introduce the `std::enable_if` struct. `std::enable_if` takes two template arguments, a boolean (or an expression that evaluates at compile-time to a boolean) and the type contained in member `::type` if the first argument is `true`. If the first argument of `std::enable_if` evaluates to false, then the entire function signature is invalid and can not be used. Now we can introduce the partition we want to add to as a template argument, subtract one from the partition number at each recursion until we reach 0 and then switch to using the function that adds to the map.
 
 ```$cpp
 template <typename V, typename T, typename... Ts>
