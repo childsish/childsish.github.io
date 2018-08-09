@@ -1,4 +1,9 @@
-# Communicating with function signatures in C++
+---
+layout: post
+title: Communicating with function signatures in C++
+categories: C++
+comments: true
+---
 
 How you write your function signatures in C++ tells the user a lot about what the function will do how it will treat the ownership of the arguments. However, as with all aspects of programming, there are good ways and bad ways to write function signatures.
 Before we start, we won't be addressing the `const` qualifier for functions. These have the simple effect of letting the user know that the underlying object will remain logically constant. We also will only consider one parameter in each signature and try to extrapolate from there. Furthermore, return values won't be addressed, but many of the same comments about parameters are also valid for return values.
