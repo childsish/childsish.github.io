@@ -381,4 +381,4 @@ The full code:
 </script>
 ```
 
-[1]: https://www.nasa.gov/multimedia/imagegallery/image_feature_666.html
+[1]: https://stsci-opo.org/STScI-01HBXSVS5DPAN3RK33M53PG372.png
