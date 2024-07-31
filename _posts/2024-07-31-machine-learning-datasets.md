@@ -44,6 +44,7 @@ These metrics help in understanding the model's accuracy and reliability, especi
 ## Overfitting
 
 ![image of overfitting](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/240px-Overfitting.svg.png "Overfitting")
+Image credit: Wikipedia<sup>[1]</sup>
 
 The main purpose of the different types of datasets is to prevent overfitting.
 Overfitting occurs when a model learns not only the underlying patterns in the training data but also the noise, leading to poor generalisation to new data.
@@ -101,3 +102,5 @@ The different datasets are intended to give realistic evaluations of a model's p
 The *validation dataset* is used for choosing generalisable hyper-parameters.
 The *testing dataset* is used for choosing generalisable training strategies.
 The *hold-out dataset* is used to evaluate the final model.
+
+[1]: https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/240px-Overfitting.svg.png
