@@ -31,7 +31,7 @@ Let's start by setting up the canvas and the basic javascript.
             draw();
         }, 1000/fps);
     };
-    image.src = 'https://www.nasa.gov/sites/default/files/images/159427main_image_feature_666_ys_full.jpg';
+    image.src = 'https://stsci-opo.org/STScI-01HBXSVS5DPAN3RK33M53PG372.png';
 
     function draw() {
         context.drawImage(
