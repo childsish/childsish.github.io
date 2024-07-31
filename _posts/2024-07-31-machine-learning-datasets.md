@@ -1,3 +1,10 @@
+---
+layout: post
+title: Understanding Different Datasets in Machine Learning
+categories: machine-learning
+comments: true
+---
+
 # Understanding Different Datasets in Machine Learning
 
 When you start off learning machine learning, you'll find there are lots of different types of datasets including training, testing, validation and hold-out dataset.
