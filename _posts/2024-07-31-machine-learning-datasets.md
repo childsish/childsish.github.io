@@ -43,6 +43,8 @@ These metrics help in understanding the model's accuracy and reliability, especi
 
 ## Overfitting
 
+![image of overfitting](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Overfitting.svg/240px-Overfitting.svg.png "Overfitting")
+
 The main purpose of the different types of datasets is to prevent overfitting.
 Overfitting occurs when a model learns not only the underlying patterns in the training data but also the noise, leading to poor generalisation to new data.
 This means that the model will perform well on the data it was trained upon, but will perform poorly on new, unseen data.
